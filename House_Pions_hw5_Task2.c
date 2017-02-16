@@ -34,7 +34,7 @@ int  main(void)
 	for( int i = Start; i <= End; i += Inc)
 	{
 		km = MtoKm(i);
-		printf("%3.3d %15.3f", i, km);
+		printf("%4d %17.3f\n", i, km);
 	}
 
 	// now for hte displace fucniton

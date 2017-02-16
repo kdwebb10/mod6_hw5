@@ -15,17 +15,20 @@
 #include <math.h>		/* For Math library */
 
 /* Function Prototypes */
-void AnnulusMoment(float am);
+void AnnulusMoment(float inertia);
 
 /* Main Program */
 int main(void)
 {
-	float r1, r2;
+	float r1, r2, inertia;
 
 	printf("Enter the value for the outer radius (r2): ");
 	scanf("%f", &r2);
 	printf("Enter the value for the inner radius (r1): ");
 	scanf("%f", &r1);
+	
+	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);
+	printf("The second moment of inertia is %.2f\n", inertia);
 
 	return 0;
 }

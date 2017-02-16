@@ -15,14 +15,40 @@
 #include <stdio.h>		/* For Standard I/O */
 
 /* Function Prototypes */
+float MtoKm(float m); // miels to kilometers
 
 /* Main Program */
 int  main(void)
 {
+	int Start, End, Inc;// start and hte end and hte increment
+	float km; // kilometers
+	printf("please enter your starting miles:\n");
+	scanf("%d" ,&Start);
+	printf("please enter your ending miles:\n");
+	scanf("%d" ,&End);
+	printf("how would you like your miles incremented:\n");
+	scanf("%d" ,&Inc);
+	printf("miles   =   Kilometers\n");
+	printf("-----       ----------\n");
+	
+	for( int i = Start; i <= End; i += Inc)
+	{
+		km = MtoKm(i);
+		printf("%3.3d %15.3f", i, km);
+	}
+
+	// now for hte displace fucniton
 
 	return 0;
 }
 
+float MtoKm(float m)
+{
+	float k;
+	k = m * 1.61;// this is hte converion factor
+	return k;
+
+}
 
 /* Function Defenitions */
 

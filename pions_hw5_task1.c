@@ -15,7 +15,7 @@
 #include <math.h>		/* For Math library */
 
 /* Function Prototypes */
-float AnnulusMoment(float am, float r1, float r2);
+float AnnulusMoment(float r2, float r1);
 
 /* Main Program */
 int main(void)
@@ -29,12 +29,13 @@ int main(void)
 	
 //	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);
 	printf("The second moment of inertia is %.2f\n", inertia);
-
+	
+	AnnulusMoment();
+	
 	return 0;
 }
-
 /* Function Defenitions */
-float AnnulusMoment(float am, float r1, float r2)
+float AnnulusMoment(float r2, float r1)
 {
 	float inertia;
 	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);

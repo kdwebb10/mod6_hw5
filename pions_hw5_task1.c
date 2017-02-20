@@ -28,14 +28,14 @@ int main(void)
 	scanf("%f", &r1);
 	
 //	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);
-	printf("The second moment of inertia is %.2f\n", inertia);
 	
-	AnnulusMoment();
+	printf("The second moment of inertia is %f\n", &inertia);
+	
 	
 	return 0;
 }
-/* Function Defenitions */
-float AnnulusMoment(float r2, float r1)
+/* Function Defenition */
+ float AnnulusMoment(float r2, float r1)
 {
 	float inertia;
 	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);

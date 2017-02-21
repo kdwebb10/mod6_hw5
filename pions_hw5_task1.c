@@ -15,7 +15,7 @@
 #include <math.h>		/* For Math library */
 
 /* Function Prototypes */
-float AnnulusMoment(float am, float r1, float r2);
+float AnnulusMoment( float r1, float r2);
 
 /* Main Program */
 int main(void)
@@ -26,7 +26,7 @@ int main(void)
 	scanf("%f", &r2);
 	printf("Enter the value for the inner radius (r1): ");
 	scanf("%f", &r1);
-	
+	inertia = AnnulusMoment(r1,r2);
 //	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);
 	printf("The second moment of inertia is %.2f\n", inertia);
 
@@ -34,7 +34,7 @@ int main(void)
 }
 
 /* Function Defenitions */
-float AnnulusMoment(float am, float r1, float r2)
+float AnnulusMoment( float r1, float r2)
 {
 	float inertia;
 	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);

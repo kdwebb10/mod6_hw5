@@ -27,7 +27,7 @@ int main(void)
 	printf("Enter the value for the inner radius (r1): ");
 	scanf("%f", &r1);
 	
-//	inertia = 3.141592653/4 * (r2*r2*r2*r2 - r1*r1*r1*r1);
+	inertia = float AnnulusMoment(r2,r1);
 	
 	printf("The second moment of inertia is %f\n", inertia);
 	
